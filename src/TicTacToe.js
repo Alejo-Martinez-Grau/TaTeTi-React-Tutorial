@@ -2,21 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './TicTacToe.css';
 import Board from './Board'
-
-
-
-// class Square extends React.Component {
-//     render() {
-//       return (
-//         <button className="square">
-//           {/* TODO */}
-//         </button>
-//       );
-//     }
-//   }
-  
-  
-  class TicTacToe extends React.Component {
+class TicTacToe extends React.Component {
     render() {
       return (
         <div className="game">
