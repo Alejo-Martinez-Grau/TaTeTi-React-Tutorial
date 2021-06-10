@@ -2,23 +2,8 @@ import React from "react";
 import Square from "./Square";
 
 class Board extends React.Component {
-  // constructor(props){
-  //     super(props);
-  //     this.state = {
-  //         squares: Array(9).fill(null),
-  //         xIsNext: true,
-  //     };
-  // }
-
-
-
   renderSquare(i) {
     return (
-      // <Square
-      //   value={this.state.squares[i]}
-      //   onClick={() => this.handleClick(i)}
-      // />
-
       <Square
         value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)}
@@ -27,18 +12,10 @@ class Board extends React.Component {
   }
 
   render() {
-    // const winner = calculateWinner(this.state.squares);
-
-    // let status;
-    // if (winner) {
-    //   status = `Winner: ${winner}`;
-    // } else {
-    //   status = `Next player: ${this.state.xIsNext ? "X" : "O"}`;
-    // }
 
     return (
       <div>
-        {/* <div className="status">{status}</div> */}
+        {/* Tratar de generar el tablero con loops*/}
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}

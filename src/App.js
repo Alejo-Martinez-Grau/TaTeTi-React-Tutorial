@@ -4,7 +4,7 @@ import TicTacToe from "./TicTacToe";
 
 function App() {
   return (
-    <Fragment className="App">
+    <Fragment>
       <TicTacToe />
     </Fragment>
   );
