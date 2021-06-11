@@ -11,6 +11,8 @@ class TicTacToe extends React.Component {
       history: [
         {
           squares: Array(9).fill(null),
+          x: null,
+          y: null,
         },
       ],
       stepNumber: 0,
@@ -34,6 +36,8 @@ class TicTacToe extends React.Component {
       history: history.concat([
         {
           squares: squares,
+          x: Math.floor(i / 3)+1,
+          y: (i % 3)+1
         },
       ]), //stores the state of the board, will allow to determine who is the winner
       stepNumber: history.length,
@@ -55,7 +59,7 @@ class TicTacToe extends React.Component {
     const winner = calculateWinner(current.squares);
 
     const moves = history.map((step, move) => {
-      const desc = move ? "Go to move #" + move : "Go to game start";
+      const desc = move ? `Go to move #${move}, position: ${step.x}, ${step.y}` : "Go to game start";
       return (
         <li key={move}>
           <button onClick={() => this.jumpTo(move)}>{desc}</button>
