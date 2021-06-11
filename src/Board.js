@@ -1,38 +1,35 @@
 import React from "react";
 import Square from "./Square";
 
-
 class Board extends React.Component {
   renderSquare(i) {
     return (
       <Square
         value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)}
+        key={i}
       />
     );
   }
 
   render() {
-
     return (
       <div>
-        {/* Tratar de generar el tablero con loops*/}
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
+        {Array(3)
+          .fill(null)
+          .map((columns, i) => {
+            return (
+              <div className="board-row" key={i}>
+                {Array(3)
+                  .fill(null)
+                  .map((rows, j) => {
+                    return this.renderSquare(3 * i + j);
+                  })}
+              </div>
+            );
+          })}
       </div>
+
     );
   }
 }
