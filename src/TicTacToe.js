@@ -60,9 +60,10 @@ class TicTacToe extends React.Component {
 
     const moves = history.map((step, move) => {
       const desc = move ? `Go to move #${move}, position: ${step.x}, ${step.y}` : "Go to game start";
+      const selectedMove = this.state.stepNumber === move ? 'btn btn-dark btn-sm' : 'btn btn-outline-dark btn-sm' ;
       return (
         <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button onClick={() => this.jumpTo(move)} className={selectedMove} >{desc}</button>
         </li>
       );
     });
