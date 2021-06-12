@@ -76,16 +76,16 @@ class TicTacToe extends React.Component {
     }
 
     return (
-      <div className="game">
+      <div className="game row">
         <Board
           squares={current.squares}
           onClick={(i) => this.handleClick(i)}
-          className="game-board"
+          className="game-board col-sm-12 col-md-6"
         />
         <HistoryPlays 
           status={status}
           moves={moves}
-          className="game-info" />
+          className="game-info col-sm-12 col-md-6" />
       </div>
     );
   }
