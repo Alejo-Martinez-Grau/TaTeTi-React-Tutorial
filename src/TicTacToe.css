@@ -32,6 +32,11 @@
         width: 5em;
     }
     
+    .status {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
     .winnerSquare {
         color: rgb(0, 255, 0)
     }

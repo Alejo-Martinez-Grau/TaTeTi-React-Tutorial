@@ -53,7 +53,7 @@ class TicTacToe extends React.Component {
   }
 
   render() {
-    console.log(this.state.xIsNext)
+    console.log(this.state.stepNumber)
     //pasar a HistoryPlays ?
     const history = this.state.history;
     const current = history[this.state.stepNumber];
@@ -72,8 +72,10 @@ class TicTacToe extends React.Component {
     let status;
     if (winner) {
       status = `Winner: ${winner.squares}`;
-    } else {
+    } else if(!winner && this.state.stepNumber !== 9) {
       status = `Next player: ${this.state.xIsNext ? "X" : "O"}`;
+    }else{
+      status = 'DRAW!';
     }
 
     return (
