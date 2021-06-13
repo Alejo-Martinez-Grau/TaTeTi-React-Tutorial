@@ -53,6 +53,7 @@ class TicTacToe extends React.Component {
   }
 
   render() {
+    console.log(this.state.xIsNext)
     //pasar a HistoryPlays ?
     const history = this.state.history;
     const current = history[this.state.stepNumber];
@@ -82,6 +83,7 @@ class TicTacToe extends React.Component {
           onClick={(i) => this.handleClick(i)}
           className="game-board col-sm-12 col-md-6"
           winner={winner}
+          board={this.state.squares}
         />
         <HistoryPlays 
           status={status}

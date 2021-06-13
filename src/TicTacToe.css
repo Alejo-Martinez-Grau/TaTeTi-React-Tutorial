@@ -33,7 +33,15 @@
     }
     
     .winnerSquare {
-        color: purple;
+        color: rgb(0, 255, 0)
+    }
+    
+    .playerX {
+        color: blue;
+    }
+    
+    .playerO {
+        color: red;
     }
     
     .square:focus {
