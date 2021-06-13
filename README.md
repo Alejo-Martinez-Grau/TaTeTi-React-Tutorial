@@ -35,3 +35,13 @@ quizas tambien sea necesario instalar Jquery y popper.js
 
 ### `npm install jquery popper.js --save`
 
+proyecto realizado con create-react-app
+
+Para ejecutar el proyecto es necesario
+
+### `git clone https://github.com/Alejo-Martinez-Grau/TaTeTi-React-Tutorial.git`
+
+
+### `npm install`
+### `npm start`
+
