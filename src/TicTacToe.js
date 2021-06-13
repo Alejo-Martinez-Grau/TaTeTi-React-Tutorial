@@ -45,6 +45,7 @@ class TicTacToe extends React.Component {
     });
   }
 
+  //Could refactor to HistoryPlays.js?
   jumpTo(step) {
     this.setState({
       stepNumber: step,
@@ -53,8 +54,7 @@ class TicTacToe extends React.Component {
   }
 
   render() {
-    console.log(this.state.stepNumber)
-    //pasar a HistoryPlays ?
+    //Could refactor to HistoryPlays.js?
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
