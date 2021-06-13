@@ -1,3 +1,7 @@
+Repo: https://github.com/Alejo-Martinez-Grau/TaTeTi-React-Tutorial
+
+Sitio web: https://asaptateti.netlify.app/
+
 
 Componente React de un Ta Te Ti realizado siguiendo el tutorial de la documentación oficial de React.
 
