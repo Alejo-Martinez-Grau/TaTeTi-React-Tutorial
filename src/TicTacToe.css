@@ -32,6 +32,10 @@
         width: 5em;
     }
     
+    .winnerSquare {
+        color: purple;
+    }
+    
     .square:focus {
         outline: none;
     }

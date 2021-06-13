@@ -70,7 +70,7 @@ class TicTacToe extends React.Component {
 
     let status;
     if (winner) {
-      status = `Winner: ${winner}`;
+      status = `Winner: ${winner.squares}`;
     } else {
       status = `Next player: ${this.state.xIsNext ? "X" : "O"}`;
     }
@@ -81,6 +81,7 @@ class TicTacToe extends React.Component {
           squares={current.squares}
           onClick={(i) => this.handleClick(i)}
           className="game-board col-sm-12 col-md-6"
+          winner={winner}
         />
         <HistoryPlays 
           status={status}
