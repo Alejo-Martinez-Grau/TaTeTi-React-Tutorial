@@ -77,7 +77,7 @@ class TicTacToe extends React.Component {
     }
 
     return (
-      <div className="game row">
+      <div className="game row justify-content-center">
         <Board
           squares={current.squares}
           onClick={(i) => this.handleClick(i)}
@@ -85,10 +85,12 @@ class TicTacToe extends React.Component {
           winner={winner}
           board={this.state.squares}
         />
+        <div className='col-sm-12 col-md-6 '>
         <HistoryPlays 
           status={status}
           moves={moves}
-          className="game-info col-sm-12 col-md-6" />
+          className="game-info" />
+          </div>
       </div>
     );
   }

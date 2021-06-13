@@ -4,7 +4,7 @@ export function HistoryPlays(props) {
     
         return( 
             <div>
-                <div>{props.status}</div>
+                <div className='my-3 mx-5'>{props.status}</div>
                     <ol>{props.moves}</ol>
             </div>
         );
